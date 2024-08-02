@@ -1,0 +1,9 @@
+#!/bin/bash
+
+PERSON1=PRAMOD1
+PERSON2=ROSHNI
+
+
+ECHO "$PERSON1: HELLO $PERSON2 HOW ARE YOU DOING"
+ECHO "$PERSON2: iam good what about you $PRSON1"
+echo "$PERSON1: good $PERSON2"
