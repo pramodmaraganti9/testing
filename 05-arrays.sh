@@ -1,4 +1,4 @@
 #!/bin/bash
 
 FROUTS=("apple" "mango" "banana")
-echo "this is an array :: $FROUTS"
+echo "this is an array :: ${FROUTS}"
