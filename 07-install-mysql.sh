@@ -5,7 +5,6 @@
         then 
         echo "error :: please run this script with root access"
         else
-        echo "you are root user"
+        echo "you are root pro user"
     fi    
     yum install mysql -y
-    
