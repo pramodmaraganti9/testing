@@ -16,7 +16,7 @@
                echo -e " $R Error: $2 .. failed $N"
                exit 1
             else
-               echo -e "$G $2 Instalaing is $G sucess $N"
+               echo -e "$2 Instalaing is $G sucess $N"
            fi
 
   }
