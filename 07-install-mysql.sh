@@ -14,4 +14,4 @@
     exit 1
     else
     echo "no error wile installing "
-    
+    fi
