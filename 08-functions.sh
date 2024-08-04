@@ -1,10 +1,11 @@
 #!/bin/bash
-     ID=$( ID -u )
+
+ID=$(id -u)
 
   validate(){
         if  [ $? -ne 0 ]
             then
-                echo "Error: $2 erroe"
+               echo "Error: $2 erroe"
                exit 1
             else
                echo " $2 Instalaing is sucess "
