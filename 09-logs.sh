@@ -10,6 +10,8 @@
        G="\e[32m"
        N="\e[0m"
 
+       echo "script started executing $TIMESTAMP " &>> $LOGFILE
+
        echo "script name: $0"
 
   validate(){
@@ -34,4 +36,6 @@
 
     yum install git -y &>> $LOGFILE
     validate $?  "installing GIT "
+
+    echo "Script ended $TIMESTAMP"
     
