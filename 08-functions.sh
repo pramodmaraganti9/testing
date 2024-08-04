@@ -1,5 +1,5 @@
 #!/bin/bash
-  ID=$(ID -u)
+     ID=$( ID -u )
 
   validate(){
         if  [ $? -ne 0 ]
