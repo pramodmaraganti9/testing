@@ -8,3 +8,10 @@
         echo "you are root pro user"
     fi    
     yum install mysql -y
+    if  [$? -ne 0]
+    then
+    echo "Error: wile installing we got the erroe"
+    exit 1
+    else
+    echo "no error wile installing "
+    
