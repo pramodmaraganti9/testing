@@ -4,16 +4,19 @@
 
        TIMESTAMP=$(date +%F-%H-%M-%S)
        LOGFILE="/temp/$0-$TIMESTAMP.log"
+       R="\e[31m"
+       G="\e[32m"
+       N="\e[0m"
 
        echo "script name: $0"
 
   validate(){
         if  [ $? -ne 0 ]
             then
-               echo "Error: $2 erroe"
+               echo -e " $R Error: $2 .. failed $N"
                exit 1
             else
-               echo " $2 Instalaing is sucess "
+               echo -e "$G $2 Instalaing is $G sucess $N"
            fi
 
   }
