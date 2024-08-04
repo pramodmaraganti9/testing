@@ -2,12 +2,12 @@
   ID=$(ID -u)
 
   validate(){
-        if  [$? -ne 0]
+        if  [ $? -ne 0 ]
             then
-                echo "Error: wile installing we got the erroe"
+                echo "Error: $2 erroe"
                exit 1
             else
-               echo "no error wile installing "
+               echo " $2 Instalaing is sucess "
            fi
 
   }
@@ -15,12 +15,12 @@
             then 
                 echo "error :: please run this script with root access"
             else
-                echo "you are root pro user"
+                echo "you are root  user"
         fi    
 
     yum install mysql -y
-    validate
-    
+    validate $? " installing My sql "
+
     yum install git -y
-    validate 
+    validate $?  "installing GIT "
     
