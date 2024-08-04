@@ -3,7 +3,9 @@
        ID=$(id -u)
 
        TIMESTAMP=$(date +%F-%H-%M-%S)
+
        LOGFILE="/temp/$0-$TIMESTAMP.log"
+
        R="\e[31m"
        G="\e[32m"
        N="\e[0m"
@@ -13,11 +15,11 @@
   validate(){
         if  [ $? -ne 0 ]
             then
-               echo -e " $R Error: $2 .. failed $N"
+               echo -e "  Error: $2 .. $R failed $N"
                exit 1
             else
                echo -e "$2 Instalaing is $G sucess $N"
-           fi
+           fi 
 
   }
         if [ $ID -ne 0 ]
@@ -27,9 +29,9 @@
                 echo "you are root  user"
         fi    
 
-    yum install mysqll -y &>>LOGFILE
+    yum install mysqll -y &>> $LOGFILE
     validate $? " installing My sql "
 
-    yum install git -y &>>LOGFILE
+    yum install git -y &>> $LOGFILE
     validate $?  "installing GIT "
     
