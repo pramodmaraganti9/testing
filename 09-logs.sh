@@ -1,6 +1,8 @@
 #!/bin/bash
 
        ID=$(id -u)
+       TIMESTAMP=S(date +%f-%h-%M-%s)
+       LOGFILE="/temp/$0-$TIMESTAMP.log"
 
        echo "script name: $0"
 
@@ -21,9 +23,9 @@
                 echo "you are root  user"
         fi    
 
-    yum install mysql -y
+    yum install mysql -y &>>LOGFILE
     validate $? " installing My sql "
 
-    yum install git -y
+    yum install git -y &>>LOGFILE
     validate $?  "installing GIT "
     
