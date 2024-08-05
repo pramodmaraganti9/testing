@@ -17,7 +17,9 @@ ID=$(id -u)
     echo -e "$2 ..... $R failed $N"
     else
     echo -e "$2 ......$G sucess $N"
+    fi
  }
+
 if [ $ID -ne 0 ]
             then 
                 echo -e " $R error :: please run this script with root access $N"
