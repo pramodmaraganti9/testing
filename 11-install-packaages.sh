@@ -7,7 +7,8 @@ ID=$(id -u)
  Y="\e[33m"
  N="\e[0m"
  TIMESTAMP=$(date +%F-%H-%M-%S)
- LOGFILE="/temp/$0-$TIMESTAMP"
+ LOGFILE="/temp/$0-$TIMESTAMP.log"
+
  echo "script started executing at $TIMESTAMP" &>> $LOGFILE
 
  VALIDATE (){
