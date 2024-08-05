@@ -8,8 +8,9 @@ ID=$(id -u)
 if [ $ID -ne 0 ]
             then 
                 echo -e " $R error :: please run this script with root access $N"
+                exit 1
             else
                 echo "you are root  user"
         fi
 
-echo "all the arguments are passw or not"
+    echo "all arguments are passed::  $@"
